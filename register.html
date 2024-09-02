@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration</title>
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registrar um Produto</h1>
+        <form id="productForm" onsubmit="sendMessage(event)">
+            <div class="form-group">
+                <label for="productName">Nome do Produto:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="productDescription">Descrição:</label>
+                <textarea id="productDescription" name="productDescription"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="supplierName">Fornecedor:</label>
+                <input type="text" id="supplierName" name="supplierName" required>
+            </div>
+
+            <div id="variationsContainer">
+                <h3>Variações</h3>
+                <div class="variation">
+                    <div class="form-group">
+                        <label for="variationName">Código de barras:</label>
+                        <input type="text" id="variationName" name="variationName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variationDescription">Peso:</label>
+                        <input type="text" id="variationDescription" name="variationDescription">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variationQuantity">Quantidade em estoque:</label>
+                        <input type="number" id="variationQuantity" name="variationQuantity" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variationPrice">Preço:</label>
+                        <input type="text" id="variationPrice" name="variationPrice" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variationPromotion">Promoção?</label>
+                        <input type="checkbox" id="variationPromotion" name="variationPromotion">
+                    </div>
+
+                    <div class="promotion-details">
+                        <div class="form-group">
+                            <label for="promotionPrice">Preço promocional:</label>
+                            <input type="text" id="promotionPrice" name="promotionPrice">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="promotionStartDate">Data de início:</label>
+                            <input type="date" id="promotionStartDate" name="promotionStartDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="promotionEndDate">Data fim:</label>
+                            <input type="date" id="promotionEndDate" name="promotionEndDate">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="variationPhotos">Fotos:</label>
+                        <input type="file" id="variationPhotos" name="variationPhotos" accept="image/*" multiple
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mainPhoto">Foto principal:</label>
+                        <input type="file" id="mainPhoto" name="mainPhoto" accept="image/*" required>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit">Registrar Produto</button>
+
+            <div class="content">
+                <a href="index.html" class="btn btn-register">Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
